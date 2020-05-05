@@ -1062,8 +1062,6 @@ button {
 }
 
 .info h2 {
-	color: green;
-	font-weight: 900;
 	font-size: 5rem;
 	font-weight: 900;
 }
@@ -1078,7 +1076,7 @@ button {
 .learn-more-btn {
 	font-size: 1.125rem;
 	color: #fff;
-	background-color: red;
+	background-color: #ff4e2e;
 
 	width: 270px;
 	height: 60px;
