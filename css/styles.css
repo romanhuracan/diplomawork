@@ -1062,6 +1062,8 @@ button {
 }
 
 .info h2 {
+	color: green;
+	font-weight: 900;
 	font-size: 5rem;
 	font-weight: 900;
 }
