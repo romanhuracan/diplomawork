@@ -54,4 +54,31 @@ $(function () {
 		event.preventDefault();
 		$('.header-container__mobile-menu ').hide();
 	});
+/*..............................ВСПЛЫВАЮЩЕЕ ОКНО ФОРМЫ ОБРАТНОЙ СВЯЗИ..............................*/
+	$('.learn-more-btn').on('click', function(){
+		$('body').prepend(`
+			<div class="popup-container">
+				<div id="popup">
+				<button href="#" id="return-btn">Вернуться на главную</button>
+				<h3>Форма обратной связи</h3>
+					<form>
+						<input type="text" name="name" placeholder="Имя">
+						<input type="text" name="email" placeholder="Email">
+						<input type="text" name="phone" placeholder="Телефон">
+						<textarea placeholder="Текст обращения" maxlength="100"></textarea>
+						<button class="learn-more-btn">Отправить заявку</button>
+					</form>
+			</div>
+			</div>`)
+	});
+
+	function formHide(item){
+		item.hide();
+	}
+
+	$('body').on('click', '#return-btn', function(event){
+		event.preventDefault();
+		let item = $(this).parents('.popup-container');
+		formHide(item);
+	});
 });
